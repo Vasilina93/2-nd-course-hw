@@ -9,7 +9,10 @@
 }
 
 .header {
-    background-image: url(img/head.png);
+    background: rgb(225, 255, 143);
+    background-image: url(img/Group-1.svg), url(img/Star-2.svg), url(img/Star-3.svg), url(img/Star-4.svg), url(img/Star-5.svg);
+    background-position: 854px -333px, 63px 94px, 156px 69px, 1013px 568px, 948px 538px;
+    background-repeat: no-repeat;
     padding-top: 196px;
     padding-bottom: 246px;
 }
@@ -43,14 +46,17 @@
 }
 
 .header__btn:hover {
-    background:white;
+    background: white;
     color: black;
 }
 
 .top {
-    background-color: black;
+    background-color: rgb(32, 32, 39);
     padding-top: 94px;
     padding-bottom: 144px;
+    background-image: url(img/Star-1.svg), url(img/Star-11.svg), url(img/Star-12.svg), url(img/Star-7.svg), url(img/Star-6.svg), url(img/Star-8.svg), url(img/Star-10.svg);
+    background-position: 1054px 77px, 58px 810px, 75px 862px, 1300px 1613px, 1370px 1646px, 1370px 4886px, 1300px 4936px;
+    background-repeat: no-repeat;
 }
 
 .cart__content {
@@ -121,7 +127,7 @@
 }
 
 .game-mini__name {
-    color: black;
+    color: rgb(32, 32, 39);
     font-size: 32px;
     font-weight: 700;
     line-height: 39px;
@@ -133,13 +139,19 @@
 }
 
 .game-mini__num {
-    color: black;
+    color: rgb(32, 32, 39);
     font-size: 16px;
     font-weight: 500;
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-top: 32px;
+    margin-left: 32px;
+    margin-right: 32px;
+    margin-top: 32px;
+    padding-left: 16px;
     font-family: Montserrat;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    width: 92px;
+    height: 36px;
+    align-content: center;
 }
 
 .cart-content__text-btn {
@@ -158,11 +170,11 @@
 
 .cart-content__text-btn:hover {
     background: white;
-    color: black;
+    color: rgb(32, 32, 39);
 }
 
 .cart-content__text-num {
-    color: black;
+    color: rgb(32, 32, 39);
     font-size: 24px;
     font-weight: 400;
     line-height: 32px;
@@ -176,7 +188,7 @@
 }
 
 .cart-content__text-name {
-    color: black;
+    color: rgb(32, 32, 39);
     font-size: 48px;
     font-weight: 700;
     line-height: 59px;
