@@ -105,7 +105,7 @@
 .game {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 450px 25px 500px;
+    grid-template-rows: 473px 7px 512px;
     gap: 32px;
     margin-top: 72px;
     margin-bottom: 50px;
@@ -282,6 +282,11 @@
         padding-right: calc(50% - 450px);
     }
 
+    .game {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
     .cart-content__img {
         width: 450px;
     }
@@ -312,6 +317,10 @@
         padding-bottom: 48px;
     }
 
+    .game {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     .game-mini__img {
         width: 343px;
@@ -520,6 +529,18 @@
     .cart .cart-content:nth-of-type(2n+1) {
         flex-direction: column-reverse;
     }
+
+    .game {
+        display: none;
+    }
+
+    .top__p {
+        display: none;
+    }
+
+    .top__h1 {
+        display: none;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 424px) {
@@ -536,6 +557,18 @@
         background-image: url(img/Vector.svg), url(img/Starmob2.svg), url(img/Starmob3.svg), url(img/Starmob4.svg), url(img/Starmob5.svg);
         background-position: 489px -103px, 37px 97px, 91px 64px, 303px 580px, 272px 557px;
         background-repeat: no-repeat;
+    }
+
+    .game {
+        display: none;
+    }
+
+    .top__p {
+        display: none;
+    }
+
+    .top__h1 {
+        display: none;
     }
 
     .header {
