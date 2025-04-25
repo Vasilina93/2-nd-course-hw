@@ -32,7 +32,7 @@ function freeArithmetic() {
             break;
         case 1:
             sign = '-';
-            correctAnswer = numb1 + numb2;
+            correctAnswer = numb1 - numb2;
             break;
         case 2:
             sign = '*';
@@ -53,4 +53,42 @@ function freeArithmetic() {
     } else {
         alert('Неверный ответ');
     }
+}
+
+function flipText() {
+    const userText = prompt("Введите текст");
+    const reverseText = userText.split('').reverse().join('');
+    alert('Перевернутый текст: ' + reverseText);
+}
+
+function viktorina() {
+    const quiz = [
+        {
+            question: "Какой цвет неба?",
+            options: ["  1. Красный", "  2. Синий", "  3. Зеленый"],
+            correctAnswer: 2 // номер правильного ответа
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["  1. Шесть", "  2. Семь", "  3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["  1. Четыре", "  2. Пять", "  3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+    let right = 0;
+    for (let i = 0; i < quiz.length; i++) {
+        const userAnswer = +prompt(`Ответьте на вопрос: ${quiz[i].question}, варианты ответа (введите цифру): ${quiz[i].options}`);
+        if (userAnswer === quiz[i].correctAnswer) {
+            right++;
+            alert('Верно');
+        } else {
+            alert('Ответ неверный');
+        }
+    }
+    alert(`Вы ответили верно ${right} раз`);
+
 }
