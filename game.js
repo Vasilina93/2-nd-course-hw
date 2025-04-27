@@ -92,3 +92,28 @@ function viktorina() {
     alert(`Вы ответили верно ${right} раз`);
 
 }
+
+
+function rockPaperScissors() {
+    const userAnswer = prompt("Камень, ножницы, бумага?").toLowerCase();
+    if (userAnswer !== 'камень' && userAnswer !== 'ножницы' && userAnswer !== 'бумага') {
+        alert('Такого варианта нет');
+        return;
+    }
+
+    const answer = ['камень', 'ножницы', 'бумага'];
+    const computerAnswer = answer[Math.floor(Math.random() * answer.length)];
+    alert(`Вы выбрали: ${userAnswer}\nКомпьютер выбрал: ${computerAnswer}`);
+
+    if (userAnswer === computerAnswer) {
+        alert('Ничья!');
+    } else if (
+        (userAnswer === 'камень' && computerAnswer === 'ножницы') ||
+        (userAnswer === 'ножницы' && computerAnswer === 'бумага') ||
+        (userAnswer === 'бумага' && computerAnswer === 'камень')
+    ) {
+        alert('Вы победили!');
+    } else {
+        alert('Компьютер победил!');
+    }
+}
