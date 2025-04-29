@@ -15,3 +15,42 @@ function whatNumber() {
         }
     }
 }
+
+function arithmetic(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function freeArithmetic() {
+    const numb1 = arithmetic(1, 50);
+    const numb2 = arithmetic(1, 50);
+    const option = arithmetic(0, 3);
+    let sign, correctAnswer;
+    switch (option) {
+        case 0:
+            sign = '+';
+            correctAnswer = numb1 + numb2;
+            break;
+        case 1:
+            sign = '-';
+            correctAnswer = numb1 + numb2;
+            break;
+        case 2:
+            sign = '*';
+            numb1 = arithmetic(1, 10);
+            numb2 = arithmetic(1, 10);
+            correctAnswer = numb1 * numb2;
+            break;
+        case 3:
+            sign = '/';
+            numb2 = arithmetic(1, 10);
+            numb1 = numb2 * arithmetic(1, 10);
+            correctAnswer = numb1 / numb2;
+            break;
+    }
+    const userAnswer = +prompt(`Сколько будет ${numb1} ${sign} ${numb2}?`);
+    if (userAnswer === correctAnswer) {
+        alert('Ответ верный');
+    } else {
+        alert('Неверный ответ');
+    }
+}
