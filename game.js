@@ -117,3 +117,12 @@ function rockPaperScissors() {
         alert('Компьютер победил!');
     }
 }
+
+
+function colorChange() {
+    const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'grey', 'violet', 'lilac', 'pink', 'brown', 'darkblue'];
+    const changeColor = colors[Math.floor(Math.random() * colors.length)];
+
+    minigames.body.style.backgroundColor = changeColor;
+    return changeColor;
+}

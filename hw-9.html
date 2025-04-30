@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <style>
+        .text {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Задание 1</h1>
+    <h1 class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+    <button class="btn">Скрыть/Показать</button>
+
+
+    <h1>Задание 2</h1>
+    <p class="p-ex2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste totam distinctio
+        deleniti, quis laboriosam.</p>
+    <button class="btn-ex2">Изменить цвет текста</button>
+
+
+
+    <h1>Задание 3</h1>
+    <h1 class="h-ex3">Добрый день!</h1>
+    <button class="btn-ex3">Заменить текст</button>
+
+
+
+
+    <h1>Задание 4</h1>
+    <p class="description">Lorem ipsum dolor sit amet.</p>
+    <p class="description">Lorem, ipsum dolor.</p>
+    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+    <p class="description">Lorem ipsum dolor sit.</p>
+    <button class="btn-ex4">Изменить текст везде</button>
+
+
+
+
+    <h1>Задание 5</h1>
+    <p class="p1-ex5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste totam distinctio
+        deleniti, quis laboriosam.</p>
+    <p class="descr5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, perspiciatis dolorem.</p>
+    <p class="descr5">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="p4-ex5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, molestiae!</p>
+    <button class="btn-ex5">Новый текст</button>
+
+
+
+
+    <h1>Задание 6</h1>
+
+    <button class="btn-ex6">Добавить параграф</button>
+
+
+
+
+
+    <h1>Задание 7</h1>
+    <p class="p1-ex7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iste totam distinctio
+        deleniti, quis laboriosam.</p>
+    <p class="descr7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, perspiciatis dolorem.</p>
+    <p class="descr7">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+    <p class="p4-ex7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, molestiae!</p>
+    <button class="btn-ex7">Удалить элемент</button>
+
+
+    <script>
+        //Задание 1
+        const btnEl = document.querySelector('.btn');
+        const textEl = document.querySelector('.text');
+        console.log(btnEl);
+        console.log(textEl);
+
+        btnEl.addEventListener('click', () => {
+            textEl.classList.toggle('text');
+        });
+
+
+        //Задание 2
+        const btnEl2 = document.querySelector('.btn-ex2');
+        const pEx2 = document.querySelector('.p-ex2');
+
+        btnEl2.addEventListener('click', () => {
+            pEx2.style.color = 'red';
+        });
+
+
+
+        //Задание 3
+        const btnEl3 = document.querySelector('.btn-ex3');
+        const textEx3 = document.querySelector('.h-ex3');
+
+        btnEl3.addEventListener('click', () => {
+            textEx3.textContent = 'Привет, мир!'
+        });
+
+
+
+        // Задание 4
+        const btnEl4 = document.querySelector('.btn-ex4');
+        const textDescr = document.querySelectorAll('.description');
+
+        btnEl4.addEventListener('click', () => {
+            textDescr.forEach(description => {
+                description.textContent = 'Изменённый текст';
+            });
+        });
+
+
+
+        // Задание 5
+        const btnEl5 = document.querySelector('.btn-ex5');
+        const textDescr5 = document.querySelectorAll('.descr5');
+
+        btnEl5.addEventListener('click', () => {
+            textDescr5.forEach(descr5 => {
+                descr5.textContent = 'Новый текст';
+            });
+        });
+
+
+        // Задание 6
+        const btnEl6 = document.querySelector('.btn-ex6');
+
+        btnEl6.addEventListener('click', () => {
+            const newP = document.createElement('p');
+            newP.textContent = 'Добавлен новый параграф 6го задания';
+            document.body.appendChild(newP);
+        });
+
+
+        // Задание 7
+        const btnEl7 = document.querySelector('.btn-ex7');
+        const textDescr7 = document.querySelector('.descr7');
+
+        btnEl7.addEventListener('click', () => {
+            textDescr7.remove()
+        });
+
+    </script>
+</body>
+
+</html>
