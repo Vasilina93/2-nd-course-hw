@@ -21,8 +21,8 @@ function arithmetic(min, max) {
 }
 
 function freeArithmetic() {
-    const numb1 = arithmetic(1, 50);
-    const numb2 = arithmetic(1, 50);
+    let numb1 = arithmetic(1, 10);
+    let numb2 = arithmetic(1, 10);
     const option = arithmetic(0, 3);
     let sign, correctAnswer;
     switch (option) {
@@ -36,13 +36,10 @@ function freeArithmetic() {
             break;
         case 2:
             sign = '*';
-            numb1 = arithmetic(1, 10);
-            numb2 = arithmetic(1, 10);
             correctAnswer = numb1 * numb2;
             break;
         case 3:
             sign = '/';
-            numb2 = arithmetic(1, 10);
             numb1 = numb2 * arithmetic(1, 10);
             correctAnswer = numb1 / numb2;
             break;
@@ -120,9 +117,12 @@ function rockPaperScissors() {
 
 
 function colorChange() {
-    const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'grey', 'violet', 'lilac', 'pink', 'brown', 'darkblue'];
-    const changeColor = colors[Math.floor(Math.random() * colors.length)];
 
-    minigames.body.style.backgroundColor = changeColor;
-    return changeColor;
+    const colors = ['red', 'blue', 'green', 'yellow', 'orange', 'grey', 'violet', 'lilac', 'pink', 'brown', 'darkblue'];
+    const newColor = colors[Math.floor(Math.random() * colors.length)];
+    console.log(newColor);
+    document.querySelector('.footer').style.backgroundColor = newColor;
 }
+
+const btnColor = document.getElementById('colorChange');
+btnColor.addEventListener('click', colorChange);
