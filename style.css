@@ -72,6 +72,7 @@
     display: flex;
     flex-direction: column;
     gap: 32px;
+    align-items: center;
 }
 
 .top__h1 {
@@ -267,6 +268,7 @@
     padding-top: 60px;
     padding-bottom: 61px;
     text-align: center;
+    transition: background-color 1s ease;
 }
 
 .footer__p {
@@ -285,6 +287,7 @@
     .game {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .cart-content__img {
@@ -320,6 +323,7 @@
     .game {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .game-mini__img {
@@ -409,17 +413,13 @@
 
 @media (min-width: 425px) and (max-width: 767px) {
     .center {
-        padding-left: calc(50% - 200px);
-        padding-right: calc(50% - 200px);
+        padding-left: calc(50% - 196.5px);
+        padding-right: calc(50% - 196.5px);
     }
 
     .header {
-        padding-top: 164px;
+        padding-top: 144px;
         padding-bottom: 165px;
-    }
-
-    .header-btn {
-        text-decoration: none;
     }
 
     .header__h1 {
@@ -439,6 +439,7 @@
     }
 
     .header__btn {
+        text-decoration: none;
         font-family: Montserrat;
         font-size: 16px;
         font-weight: 600;
@@ -464,10 +465,11 @@
         padding-top: 0px;
         padding-bottom: 48px;
     }
-    
+
     .game {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
     }
 
     .cart-content__img {
@@ -548,10 +550,10 @@
     }
 }
 
-@media (min-width: 320px) and (max-width: 424px) {
+@media (min-width: 375px) and (max-width: 424px) {
     .center {
-        padding-left: calc(50% - 150px);
-        padding-right: calc(50% - 150px);
+        padding-left: calc(50% - 171.5px);
+        padding-right: calc(50% - 171.5px);
     }
 
     .header-btn {
@@ -577,7 +579,7 @@
     }
 
     .header {
-        padding-top: 164px;
+        padding-top: 144px;
         padding-bottom: 165px;
     }
 
@@ -602,7 +604,7 @@
         font-size: 16px;
         font-weight: 600;
         align-items: center;
-        width: 255px;
+        width: 285px;
         height: 55px;
         display: block;
         margin-left: auto;
@@ -625,9 +627,7 @@
         padding-bottom: 48px;
     }
 
-    .cart-content {
-        width: 300px;
-    }
+
 
     .cart-content__text-name {
         padding-top: 0px;
@@ -640,10 +640,6 @@
     .cart-content__text {
         padding-top: 0px;
         gap: 16px;
-    }
-
-    .cart-content__img {
-        width: 300px;
     }
 
     .cart-content__text-num {
@@ -659,15 +655,14 @@
         height: 55px;
         font-size: 16px;
         font-weight: 600;
-        margin-left: 29px;
-        margin-right: 29px;
+        margin-inline: auto;
     }
 
     .cart-content {
         display: flex;
         flex-direction: column;
         gap: 10px;
-        width: 300px;
+        width: 343px;
         padding-bottom: 16px;
     }
 
